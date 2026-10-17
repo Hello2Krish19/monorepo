@@ -2,6 +2,20 @@
     "node_name": "DAQ_APP",
     "bus_name": "CCAN",
     "tx": [
+            {
+            "message_name": "daq_onboarding_control",
+            "description": "Onboarding control message from DaqApp",
+            "signals": [
+                {
+                    "signal_name": "on_amount",
+                    "description": "On amount duration",
+                    "data_type": "uint16_t",
+                    "unit": "ms"
+                }
+            ],
+            "period_ms": 500,
+            "priority": 3
+        },
         {
             "message_name": "charge_request",
             "description": "Message from DAQ App to A_BOX to request charging",
@@ -53,6 +67,9 @@
         },
         {
             "message_name": "thermistor_telemetry_ccan"
+        },
+        {
+            "message_name": "heartbeat_onboarding"
         }
     ]
 }

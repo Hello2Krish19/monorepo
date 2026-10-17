@@ -1,0 +1,32 @@
+{
+    "node_name": "ONBOARDING",
+    "busses": {
+        "CCAN": {
+            "peripheral": "FDCAN1",
+            "tx": [
+                {
+                    "message_name": "heartbeat_onboarding",
+                    "description": "Periodic onboarding heartbeat",
+                    "signals": [
+                        {
+                            "signal_name": "blink_count",
+                            "data_type": "uint16_t"
+                        },
+                        {
+                            "signal_name": "favorite_number",
+                            "data_type": "uint16_t"
+                        }
+                    ],
+                    "period_ms": 200,
+                    "priority": 1
+                }
+            ],
+            "rx": [
+                 {
+                    "message_name": "daq_onboarding_control"
+                }
+            ]
+        }
+    },
+    "fault_library_enabled": false
+}
